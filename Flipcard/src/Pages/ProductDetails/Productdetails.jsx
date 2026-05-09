@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../ProductDetails/ProductDetails.css'
+import '../ProductDetails/Productdetails.css'
 import { ProductsData } from '../../ProductData'
 import { useParams } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa'
