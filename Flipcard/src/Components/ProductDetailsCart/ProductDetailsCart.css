@@ -1,46 +1,53 @@
 .ProductDetailsCart{
     width:100%;
-    height:250px;
+    min-height:250px;
     display: flex;
     padding:10px;
     justify-content: center;
+    gap: 15px;
 }
 .ProductDetailsCart-Img{
     width:250px;
     height:200px;
+    flex-shrink: 0;
 }
 
 .ProductDetailsCart-Img > img {
-    width:200px;
+    width:100%;
     height:100%;
     object-fit: contain;
 }
 .ProductDetailsCart-details{
-    width:70%;
+    flex: 1;
+    min-width: 0;
     padding: 10px 20px;
     color:black;
 }
 .ProductDetailsCart-name{
     font-size: 18px;
+    line-height: 1.4;
+    word-break: break-word;
 }
 .ratingAndreviews{
     display: flex;
     padding:5px 0;
+    gap: 10px;
+    align-items: center;
 }
 .stars{
     background-color: #388e3c;
     font-size: 12px;
-    padding: 4px 4px 2px 6px;
+    padding: 4px 6px;
     color:white;
     border-radius: 4px;
+    white-space: nowrap;
 }
 .ratings{
     color:gray;
     font-size: 14px;
-    padding-left: 8px;
 }
 .ProductDetailCard-Productdetails{
-    padding:10px;
+    padding:10px 0;
 }
 .ProductDetailCard-detail{
     list-style-type: none;
@@ -50,23 +57,60 @@
     font-weight: 400;
 }
 .ProductDetailCart-PriceandDelivery{
-    padding:20px;
+    padding:20px 0;
     color:black;
 }
 .pricecontainer{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 .Freede{
     font-size: 12px;
-    padding:5px;
+    padding:5px 0;
     font-weight: 300;
-    color:#212121;
+    color:#388e3c;
 }
 .discount{
-    padding:5px;
+    padding:0;
     font-size:14px;
-    font-weight: 300;
+    font-weight: 500;
     color:#212121;
 }
 
+/* Responsive Product Details Cart */
+@media (max-width: 768px) {
+    .ProductDetailsCart {
+        flex-direction: column;
+        min-height: auto;
+        padding: 8px;
+    }
+    .ProductDetailsCart-Img {
+        width: 100%;
+        height: 200px;
+    }
+    .ProductDetailsCart-details {
+        padding: 10px 0;
+    }
+    .ProductDetailsCart-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ProductDetailsCart {
+        padding: 5px;
+    }
+    .ProductDetailsCart-Img {
+        height: 150px;
+    }
+    .ProductDetailsCart-name {
+        font-size: 14px;
+    }
+    .ProductDetailCard-detail {
+        font-size: 12px;
+    }
+    .ratingAndreviews {
+        font-size: 12px;
+    }
+}

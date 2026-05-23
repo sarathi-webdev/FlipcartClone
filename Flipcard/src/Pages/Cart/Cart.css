@@ -1,7 +1,7 @@
 .Cart{
     padding:  90px 50px;
     width:100%;
-    height:100vh;
+    min-height:100vh;
     background: rgb(240,238,238);
 }
 .Cart-tabs{
@@ -11,12 +11,13 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+    border-radius: 2px;
 }
 .flipcart .grocery{
     width:30%;
     padding:20px 10px;
     cursor:pointer;
-
+    font-size: 14px;
 }
 .active{
     border-bottom: 3px solid rgb(42,85,229);
@@ -28,15 +29,16 @@
     width: 100%;
     background: white;
     padding: 10px 0 36px;
-
 }
 .Cart-item{
     display: flex;
     margin-left: 50px;
     margin-bottom: 50px;
+    gap: 30px;
 }
 .Cart-item--left{
     width:150px;
+    flex-shrink: 0;
 }
 .Cart-item--left img{
     width:100%;
@@ -44,10 +46,11 @@
     object-fit: contain;
 }
 .Cart-item--right{
-    margin-left: 100px;
+    flex: 1;
 }
 .Cart-item--right p {
-    padding: 20px;
+    padding: 10px 0;
+    font-size: 14px;
 }
 .Cart-item-btn{
     width:200px;
@@ -61,10 +64,10 @@
     border-radius: 2px;
     cursor: pointer;
     background: #fb641b;
-
 }
 .CartitemsNull{
     text-align: center;
+    padding: 40px 20px;
 }
 .CartitemsNull-img{
     width:200px;
@@ -78,15 +81,104 @@
 }
 .CartitemsNull-des{
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 14px;
 }
 .CartitemsNull-btn{
     height:40px;
     width:15%;
+    min-width: 120px;
     border: none;
     outline: none;
     background: #fb641b;
     color:white;
     cursor: pointer;
-    
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Responsive Cart */
+@media (max-width: 768px) {
+    .Cart {
+        padding: 90px 20px;
+    }
+    .Cart-tabs {
+        flex-direction: column;
+    }
+    .flipcart,
+    .grocery {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+    .Cart-item {
+        margin-left: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .Cart-item--left {
+        width: 120px;
+    }
+    .Cart-item--left img {
+        height: 120px;
+    }
+    .Cart-item-btn {
+        width: 100%;
+        max-width: 200px;
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+    .CartitemsNull-btn {
+        width: 60%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .Cart {
+        padding: 70px 10px;
+    }
+    .Cart-tabs {
+        gap: 0;
+    }
+    .flipcart,
+    .grocery {
+        padding: 12px 5px;
+        font-size: 11px;
+    }
+    .Cart-item {
+        margin-left: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Cart-item--left {
+        width: 100px;
+    }
+    .Cart-item--left img {
+        height: 100px;
+    }
+    .Cart-item--right p {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+    .Cart-item-btn {
+        width: 100%;
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+    .CartitemsNull {
+        padding: 20px 10px;
+    }
+    .CartitemsNull-img {
+        width: 150px;
+        height: 150px;
+    }
+    .CartitemsNull-title {
+        font-size: 16px;
+    }
+    .CartitemsNull-des {
+        font-size: 12px;
+    }
+    .CartitemsNull-btn {
+        width: 80%;
+    }
 }

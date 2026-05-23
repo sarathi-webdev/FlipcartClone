@@ -3,17 +3,43 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
 }
 .categoryBar-Img{
     width:60px;
+    height: 60px;
 }
 .categoryBar-Img > img{
     width:100%;
+    height: 100%;
+    object-fit: contain;
 }
 .CategoryBar-name{
     width:100%;
     font-size:13px;
-    font-weight: 500px;
+    font-weight: 500;
     padding: 4px 0;
+    text-align: center;
+    word-break: break-word;
 }
 
+/* Responsive Category Bar */
+@media (max-width: 768px) {
+    .categoryBar-Img {
+        width: 50px;
+        height: 50px;
+    }
+    .CategoryBar-name {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoryBar-Img {
+        width: 40px;
+        height: 40px;
+    }
+    .CategoryBar-name {
+        font-size: 9px;
+    }
+}

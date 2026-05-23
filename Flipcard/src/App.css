@@ -3,10 +3,16 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 
 body{
     font-family:"Roboto", sans-serif;
+    overflow-x: hidden;
 }
 :root{
     --flipkart-lightblue:#2874f0;

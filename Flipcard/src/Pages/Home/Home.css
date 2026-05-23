@@ -7,7 +7,6 @@
 .Home-Category-Container{
     width:100%;
     box-shadow: 0px 0px 2px gray;
-
 }
 .Home-CategoryBar{
     width:1200px;
@@ -20,4 +19,42 @@
 }
 .HomeContainer{
     padding: 0 40px;
+}
+
+/* Responsive Home */
+@media (max-width: 1200px) {
+    .Home-CategoryBar {
+        width: 100%;
+        padding: 15px 10px;
+        overflow-x: auto;
+    }
+    .HomeContainer {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Home {
+        padding: 30px 0px;
+    }
+    .Home-CategoryBar {
+        padding: 12px 10px;
+        gap: 10px;
+    }
+    .HomeContainer {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Home {
+        padding: 20px 0px;
+    }
+    .Home-CategoryBar {
+        padding: 10px 5px;
+        gap: 5px;
+    }
+    .HomeContainer {
+        padding: 0 5px;
+    }
 }

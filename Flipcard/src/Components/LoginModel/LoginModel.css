@@ -8,6 +8,8 @@
     background-color: white;
     z-index: 10000;
     display:flex;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 .overlay{
     position: fixed;
@@ -20,22 +22,22 @@
 }
 .left-container img{
     position: absolute;
-    
     top:50%;
-
-
+    transform: translateY(-50%);
 }
 .left{
     width:40%;
     background: var(--flipkart-lightblue);
-    /* height:100%; */
     color:white;
     padding:30px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .Login-title{
     font-size: 30px;
     padding: 20px 0;
+    line-height: 1.3;
 }
 .Login-des{
     font-size:18px;
@@ -43,9 +45,8 @@
 }
 .right{
     width:60%;
-    height: 100%;
     padding: 50px 25px;
-
+    overflow-y: auto;
 }
 .Login-input{
     border:none;
@@ -75,6 +76,12 @@
     font-size:15px;
     height:48px;
     cursor: pointer;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+.Login-btn:hover {
+    background-color: #e85a1a;
 }
 .Login-signup{
     margin-top:50%;
@@ -82,12 +89,79 @@
     color:#2874f0;
     font-size:16px;
     cursor: pointer;
+    font-weight: 600;
 }
 .close{
     position: absolute;
-    top:0%;
-    right:-6%;
-    font-size: 40px;
+    top:-15px;
+    right:-15px;
+    font-size: 30px;
     cursor:pointer;
+    background: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10001;
+}
 
+/* Responsive Login Modal */
+@media (max-width: 768px) {
+    .LoginModel {
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+        padding: 20px;
+    }
+    .right {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .Login-title {
+        font-size: 24px;
+    }
+    .Login-des {
+        font-size: 14px;
+    }
+    .left-container img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .LoginModel {
+        width: 95%;
+        top: 50%;
+    }
+    .left {
+        padding: 15px;
+    }
+    .right {
+        padding: 20px 15px;
+    }
+    .Login-title {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+    .Login-des {
+        font-size: 12px;
+    }
+    .Login-input {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    .Login-btn {
+        font-size: 13px;
+        height: 40px;
+    }
+    .Login-signup {
+        font-size: 14px;
+        margin-top: 30%;
+    }
 }
